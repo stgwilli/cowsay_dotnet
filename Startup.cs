@@ -38,9 +38,11 @@ namespace cowsay_dotnet
             });
 
             var routeBuilder = new RouteBuilder(app, defaultRoute);
+
             routeBuilder.MapGet("cowsay/{message}", context => { 
                 var message = (string)context.GetRouteValue("message");
-                var output = new Cowsay().Speak(message);
+                var dead = context.Request.Query["dead"] == "1";
+                var output = new Cowsay().Speak(message, dead);
                 return context.Response.WriteAsync(string.Format(@"
                 <!DOCTYPE html>
                     <html>

@@ -3,7 +3,7 @@
 
 public class Cowsay {
 
-    public string Speak(string message) {
+    public string Speak(string message, bool dead=false) {
 
         var messageLength = message.Length;
         var paddedMessage = message.PadLeft(messageLength + 1).PadRight(messageLength + 2);
@@ -16,12 +16,12 @@ public class Cowsay {
     {0} 
     {1}
     {0}
-         \   ^__^ 
-          \  (oo)\_______
-             (__)\       )\/\\
+         \  ^___^ 
+          \ ({2} {2})\_______
+            (___)\       )\/\\
                  ||----w |
                  ||     ||
-        ", border, messageLine);
+        ", border, messageLine, dead ? 'x' : 'o');
 
         return output;
     }
