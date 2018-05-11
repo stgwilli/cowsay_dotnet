@@ -47,7 +47,7 @@ namespace cowsay_dotnet
                 <!DOCTYPE html>
                     <html>
                         <head>
-                            <title>Cowsay></title>
+                            <title>Cowsay Dotnet</title>
                         </head>
                         <body>
                             <pre>{0}</pre>
