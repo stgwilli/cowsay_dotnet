@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh 'dotnet clean'
+                sh 'dotnet build -c Release'
+                sh 'dotnet publish -c Release'
             }
         }
         stage('Test') {
