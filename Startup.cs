@@ -49,7 +49,7 @@ namespace cowsay_dotnet
                         <head>
                             <title>Cowsay Dotnet</title>
                         </head>
-                        <body>
+                        <body style='background-color:azure'>
                             <pre>{0}</pre>
                         </body>
                     </html>", output));
